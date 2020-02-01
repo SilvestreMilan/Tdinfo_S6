@@ -12,7 +12,7 @@ main(){
     as_coeur.visible = 1;                  //par defaut les cartes ajoutées sont visibles
     as_coeur.COULEUR = COEUR;
   
-   CARTE trois_pique;
+  CARTE trois_pique;
     trois_pique.rang = 3;
     trois_pique.visible = 1;               //par defaut les cartes ajoutées sont visibles
     trois_pique.COULEUR = PIQUE;
