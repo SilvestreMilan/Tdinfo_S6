@@ -4,11 +4,11 @@
 #include "element.h"
 #include "liste.h"
 
-/* La compilation se ferapar la commande clang mytest.c list.c element.c -o mytestet l’execution par./mytest */
+/* La compilation se fera par la commande clang mytest.c list.c element.c -o mytestet l’execution par./mytest */
 
 main(){
   
-  list_t l = list_new(void);
+  list_t l = list_new();
   
   CARTE as_coeur;
     as_coeur.rang = 1;
