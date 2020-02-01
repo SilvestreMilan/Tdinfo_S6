@@ -1,3 +1,6 @@
+/* un  programme  principal  (fonction main())  qui  crée une  liste, ajoute l’as de coeur, puis le 3 de pique 
+`à la liste et affiche ensuite la liste.*/
+
 #include "element.h"
 #include "liste.h"
 
