@@ -73,37 +73,68 @@ list_t list_find(element_t e, list_t l) {
 
 // Compte le nombre de e dans la liste
 int list_count(element_t e, list_t l) {
-  // A completer
-  return 0;
+  
+  list_t p;
+  int compteur = 0;
+  
+  for( p = l; !list_is_empty(p); p = p -> next)
+  { if( element_equal( e, p.val)) compteur += 1; }
+  
+  return compteur;
 }
 
 // Ajoute en fin de liste
 list_t list_add_last(element_t e, list_t l) {
-  // A completer
-  return NULL;
+  
+  list_t p;
+  
+  for( p = l; !list_is_empty( p -> next); p = p -> next)
+  p -> next = list_add_first( e; list_new());
+  
+  return l;
 }
 
 // Libere toute la liste et retourne une liste vide
 list_t list_delete(list_t l) {
-  // A completer
-  return NULL;
+  for( , !list_is_empty( l), l = list_del_first( l)) 
+  return l;
 }
 
 // Concatene 2 listes
 list_t list_concat(list_t l1, list_t l2) {
-  // A completer
-  return NULL;
+  if( list_is_empty( l1)) return l2;
+  
+  list_t p;
+  
+  for( p = l; !list_is_empty( p -> next); p = p -> next)
+  p -> next = l2;
+  
+  return l1;
 }
 
 // Clone une liste
 list_t list_copy(list_t l) {
-  // A completer
-  return NULL;
+  list_t l1 = list_new();
+  list_t p;
+  
+  for( p = l, !list_is_empty( p), p = p -> next) l1 = list_add_first( p -> val, l1);
+  
+  return l1;
 }
 
 // Supprime l'element en position n et retourne la nouvelle liste
 // Les positions demarrent a 1
 list_t list_remove_n(int n, list_t l) {
-  // A completer
-  return NULL;
+  if( n > list_length( l))
+  { fprintf( stderr, "n > list_length\n" );
+    return;
+  }
+  
+  int compteur;
+  list_t p = l;
+  
+  for( compteur = 1, compteur != n, (compteur ++) && (p = p -> next))
+  list_del_first( p);
+  
+  return l;
 }
