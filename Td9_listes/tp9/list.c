@@ -106,7 +106,7 @@ list_t list_concat(list_t l1, list_t l2) {
   
   list_t p;
   
-  for( p = l; !list_is_empty( p -> next); p = p -> next)
+  for( p = l1; !list_is_empty( p -> next); p = p -> next)
   p -> next = l2;
   
   return l1;
@@ -117,7 +117,7 @@ list_t list_copy(list_t l) {
   list_t l1 = list_new();
   list_t p;
   
-  for( p = l, !list_is_empty( p), p = p -> next) l1 = list_add_first( p -> val, l1);
+  for( p = l, !list_is_empty( p), p = p -> next) l1 = list_add_last( p -> val, l1);
   
   return l1;
 }
@@ -127,13 +127,13 @@ list_t list_copy(list_t l) {
 list_t list_remove_n(int n, list_t l) {
   if( n > list_length( l))
   { fprintf( stderr, "n > list_length\n" );
-    return;
+    return l;
   }
   
   int compteur;
   list_t p = l;
   
-  for( compteur = 1, compteur != n, (compteur ++) && (p = p -> next))
+  for( compteur = 1, compteur != n, (compteur ++) && (p = p -> next))   // on commence à compter à partir de 1
   list_del_first( p);
   
   return l;
