@@ -21,7 +21,7 @@ main(){
     trois_pique.COULEUR = PIQUE;
   
   l = list_add_first( as_coeur, l);
-  l = list_add_first( trois-pique, l);
+  l = list_add_first( trois_pique, l);
   
   list_print( l);                          // Suppose que la fonction element_print existe.
 }
