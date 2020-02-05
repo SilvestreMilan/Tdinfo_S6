@@ -84,7 +84,7 @@ int list_count(element_t e, list_t l) {
 }
 
 // Ajoute en fin de liste
-list_t list_add_last(element_t e, list_t l) {
+list_t list_add_last(element_t e; list_t l) {
   
   list_t p;
   
@@ -96,7 +96,7 @@ list_t list_add_last(element_t e, list_t l) {
 
 // Libere toute la liste et retourne une liste vide
 list_t list_delete(list_t l) {
-  for( , !list_is_empty( l), l = list_del_first( l)) 
+  for( ; !list_is_empty( l); l = list_del_first( l)) 
   return l;
 }
 
@@ -117,7 +117,7 @@ list_t list_copy(list_t l) {
   list_t l1 = list_new();
   list_t p;
   
-  for( p = l, !list_is_empty( p), p = p -> next) l1 = list_add_last( p -> val, l1);
+  for( p = l; !list_is_empty( p); p = p -> next) l1 = list_add_last( p -> val, l1);
   
   return l1;
 }
@@ -133,7 +133,7 @@ list_t list_remove_n(int n, list_t l) {
   int compteur;
   list_t p = l;
   
-  for( compteur = 1, compteur != n, (compteur ++) && (p = p -> next))   // on commence à compter à partir de 1
+  for( compteur = 1; compteur != n; (compteur ++) && (p = p -> next))   // on commence à compter à partir de 1
   list_del_first( p);
   
   return l;
