@@ -116,7 +116,7 @@ list_t list_concat(list_t l1, list_t l2) {
   
   list_t p;
   
-  for( p = l1; !list_is_empty( p -> next); p = p -> next)
+  for( p = l1; !list_is_empty( p -> next); p = p -> next);
   p = l2;
   
   return l1;
