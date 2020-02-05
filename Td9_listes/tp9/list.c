@@ -78,7 +78,7 @@ int list_count(element_t e, list_t l) {
   int compteur = 0;
   
   for( p = l; !list_is_empty(p); p = p -> next)
-  { if( element_equal( e, p.val)) compteur += 1; }
+  { if( element_equal( &e, p->val)) compteur += 1; }
   
   return compteur;
 }
