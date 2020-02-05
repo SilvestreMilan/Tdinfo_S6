@@ -13,12 +13,12 @@ main(){
   CARTE as_coeur;
     as_coeur.rang = 1;
     as_coeur.visible = 1;                  //par defaut les cartes ajoutées sont visibles
-    as_coeur.COULEUR = COEUR;
+    as_coeur.couleur = COEUR;
   
   CARTE trois_pique;
     trois_pique.rang = 3;
     trois_pique.visible = 1;               //par defaut les cartes ajoutées sont visibles
-    trois_pique.COULEUR = PIQUE;
+    trois_pique.couleur = PIQUE;
   
   l = list_add_first( as_coeur, l);
   l = list_add_first( trois_pique, l);
