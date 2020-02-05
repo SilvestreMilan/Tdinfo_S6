@@ -90,9 +90,11 @@ list_t list_add_last(element_t e, list_t l) {
   list_t l1 = list_new();
   
   for( p = l; !list_is_empty( p -> next); p = p -> next)
-  l1 = list_add_first( e, list_new());
-  l1 = list_add_first( p -> val, l1);
-  p = l1;
+  l1 = list_add_first( e, l1);
+  p->next=l1;
+  
+  
+//   p = list_add_first( p -> val, l);
   
   return l;
 }
