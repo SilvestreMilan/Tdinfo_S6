@@ -85,18 +85,23 @@ int list_count(element_t e, list_t l) {
 
 // Ajoute en fin de liste
 list_t list_add_last(element_t e, list_t l) {
+  if ( list_is_empty( l ) ) {
+    return list_add_first( e, l ); 
+  }
+  else { 
+    list_t p;
+    list_t l1 = list_new();
+
+    for( p = l; !list_is_empty( p -> next); p = p -> next);
   
-  list_t p;
-  list_t l1 = list_new();
-  
-  for( p = l; !list_is_empty( p -> next); p = p -> next)
-  l1 = list_add_first( e, l1);
-  p->next=l1;
+    l1 = list_add_first( e, l1);
+    p->next=l1;
   
   
 //   p = list_add_first( p -> val, l);
   
-  return l;
+    return l;
+  }
 }
 
 // Libere toute la liste et retourne une liste vide
