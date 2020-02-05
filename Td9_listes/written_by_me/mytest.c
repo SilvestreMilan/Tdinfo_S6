@@ -2,7 +2,7 @@
 `à la liste et affiche ensuite la liste.*/
 
 #include "element.h"
-#include "liste.h"
+#include "list.h"
 
 /* La compilation se fera par la commande clang mytest.c list.c element.c -o mytestet l’execution par./mytest */
 
