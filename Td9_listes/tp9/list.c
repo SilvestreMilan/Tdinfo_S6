@@ -84,7 +84,7 @@ int list_count(element_t e, list_t l) {
 }
 
 // Ajoute en fin de liste
-list_t list_add_last(element_t e; list_t l) {
+list_t list_add_last(element_t e, list_t l) {
   
   list_t p;
   
