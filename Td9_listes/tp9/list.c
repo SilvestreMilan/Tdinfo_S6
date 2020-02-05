@@ -89,7 +89,7 @@ list_t list_add_last(element_t e, list_t l) {
   list_t p;
   
   for( p = l; !list_is_empty( p -> next); p = p -> next)
-  p -> next = list_add_first( e; list_new());
+  p -> next = list_add_first( e, list_new());
   
   return l;
 }
