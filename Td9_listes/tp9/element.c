@@ -29,3 +29,12 @@ int element_equal(CARTE* e1, CARTE* e2) {
         &&  e1->visible==e2->visible
         &&  e1->couleur==e2->couleur);
 }
+
+/* ici la relation d'ordre implemente est < ( < est bien une relation d'ordre totale sur N ) */
+int element_compare( CARTE a, CARTE b ){
+  VALUE Va = a.rang;
+  VALUE Vb = b.rang;
+  if( Va < Vb ) return 1;
+  if( Va == Vb ) return 0;
+  if ( Va > Vb ) return -1;
+}
