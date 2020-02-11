@@ -29,7 +29,7 @@ element_t list_first(list_t l);
 // PRECONDITION : liste non vide
 list_t list_next(list_t l);
 
-// Ajoute l'élément e en tête de la liste et retourne la nouvelle liste
+// Ajoute l'élément e en tête de la liste et retourne la nouvelle  liste
 list_t list_add_first(element_t e, list_t l);
 
 // Supprime le maillon en tête de liste et retourne la nouvelle liste
@@ -63,4 +63,13 @@ list_t list_copy(list_t l);
 
 // Supprime l'element en position n et retourne la nouvelle liste
 list_t list_remove_n(int n, list_t l) ;
+
+// ajoute un element qui prendra la position
+// REMARQUE : si 1 > n ou n > length list alors on renvoie la liste sans rien changer
+list_t list_insert_n( element_t e, list_t l, int n);
+
+//ajoute un element de maniere triee dans une liste deja liste_dont_le_premier_element_est_a_supprimer
+//PRECONDITION : l'ensemble des element est totalement ordonne
+list_t list_add_sort ( element_t e, list_t l );
+
 #endif
