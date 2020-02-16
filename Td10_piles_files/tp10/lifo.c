@@ -15,31 +15,31 @@ lifo_t lifo_push (CARTE e,lifo_t p){
 }
 
 lifo_t lifo_del_first(lifo_t p) {
-  // TODO
-  return NULL;
+  p = list_del_first( p );
+  return p;
 }
 
 /* la pile n'est pas modifiée */
 CARTE lifo_peek(lifo_t p){
-  // TODO
-  return element_empty();
+  return list_first(p);
 }
 
-CARTE lifo_pop(lifo_t* ap)	/* attention: la pile est modifiee */
-{	  // TODO
-  return element_empty();
+CARTE lifo_pop(lifo_t* ap){	/* attention: la pile est modifiee */
+  lifo_t p = *ap;
+  CARTE premiere_carte = p -> val;
+  *ap = lifo_del_first( *ap );
+  return premiere_carte;
 }
 
 int lifo_length(lifo_t p) {
-  // TODO
-  return 0;
+  return list_length( p );
 }
 
 void lifo_print(lifo_t p) {
-  // TODO
+  list_print(p);
 }
 
 lifo_t lifo_delete(lifo_t p) {
-  // TODO
-  return NULL;
+  p = list_delete(p);
+  return p;
 }

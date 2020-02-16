@@ -29,7 +29,7 @@ element_t list_first(list_t l);
 // PRECONDITION : liste non vide
 list_t list_next(list_t l);
 
-// Ajoute l'élément e en tête de la liste et retourne la nouvelle  liste
+// Ajoute l'élément e en tête de la liste et retourne la nouvelle liste
 list_t list_add_first(element_t e, list_t l);
 
 // Supprime le maillon en tête de liste et retourne la nouvelle liste
